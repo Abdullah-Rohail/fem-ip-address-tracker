@@ -9,26 +9,62 @@
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
 </head>
 <body>
+  <div id="top-box">
+    <header>
+      <h1>IP Address Tracker</h1>
+    </header>
+    <span id="search-box">  
+      <input type="text" placeholder="Search for any IP address or domain">
+      <span id="searchBtn" class="arrow">
+        <img src="./images/icon-arrow.svg" alt="Run Search">
+      </span>
+    </span>
+    <div id="results-box">
+      
+      <div>
+          <span class="title">IP ADDRESS</span>  
+          <span class="value" id="data-ip"></span>
+          <span class="vr"></span>
+      </div>
+      <div>
+          <span class="title">LOCATION</span>  
+          <span class="value" id="data-loc"></span>
+          <span class="vr"></span>
+      </div>
+      <div>
+          <span class="title">TIMEZONE</span>  
+          <span class="value" id="data-timezone"></span>
+          <span class="vr"></span>
+      </div>
+      <div>
+          <span class="title">ISP</span>  
+          <span class="value" id="data-isp"></span>
+      </div>
+    
+    </div>
+  </div>
+  <div id="mapid"></div>
+  
 
-  IP Address Tracker
+  
 
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Abdullah-Rohail">Muhammad Abdullah Rohail</a>.
   </div>
+
+  <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <script defer src="./scripts/script.js"></script>
 </body>
 </html>
