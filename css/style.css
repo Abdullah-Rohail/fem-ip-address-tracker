@@ -130,5 +130,19 @@ header h1{
     height: 60vh;
 }
 
+@media screen and (max-width:600px){
+    #results-box{
+        grid-template-columns: auto;
+        width: 50%;
+        bottom: -100px;
+    }
+    #results-box div{
+        text-align: center;
+    }
+    .vr{
+        display: none;
+    }
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
